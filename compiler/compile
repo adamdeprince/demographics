@@ -1,0 +1,6 @@
+#!/bin/bash
+
+python race_compiler.py > ../demographics/data/race.py & 
+python gender_compiler.py > ../demographics/data/gender.py & 
+wait
+
