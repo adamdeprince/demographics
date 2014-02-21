@@ -18,7 +18,7 @@ Or how many are black
 
 ````
 >>> from demographics import us_demographics
->>> me = us_demographics('adam', 'deprince)
+>>> me = us_demographics('adam', 'deprince')
 >>> pop = 313.9 * 1000 ** 2 # Current population of the US
 >>> me.popularity * me.black * pop
 

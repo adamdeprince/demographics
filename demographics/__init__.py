@@ -20,12 +20,12 @@ def us_demographics(firstname, lastname):
                        p,
                        gender_data.m / (gender_data.m + gender_data.f),
                        gender_data.f / (gender_data.m + gender_data.f),
-                       race_data.white,
-                       race_data.black, 
-                       race_data.hispanic,
-                       race_data.aian,
-                       race_data.api,
-                       race_data.multi,
+                       race_data.white or 0.0,
+                       race_data.black or 0.0, 
+                       race_data.hispanic or 0.0,
+                       race_data.aian or 0.0,
+                       race_data.api or 0.0,
+                       race_data.multi or 0.0,
                        USRaw(gender_data, race_data))
 
 
@@ -33,15 +33,15 @@ def us_demographics_as_dict(firstname, lastname):
     d = us_demographics(firstname, lastname)
     return dict(first=d.first,
                 last=d.last,
-                popularity=d.popularity or 0.0,
-                male=d.male or 0.0,
-                female=d.female or 0.0,
-                white=d.white or 0.0,
-                black=d.black or 0.0,
-                hispanic=d.hispanic or 0.0,
-                aian=d.aian or 0.0,
-                api=d.api or 0.0,
-                multi=d.multi or 0.0,
+                popularity=d.popularity,
+                male=d.male,
+                female=d.female,
+                white=d.white,
+                black=d.black,
+                hispanic=d.hispanic,
+                aian=d.aian,
+                api=d.api,
+                multi=d.multi,
                 raw=dict(
                     gender=d.raw.gender,
                     raced=d.raw.race)

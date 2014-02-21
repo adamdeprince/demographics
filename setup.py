@@ -16,7 +16,7 @@ from setuptools import setup
 
 setup(
     name='demographics',
-    version='0.0.0',
+    version='0.0.1',
     author='Adam DePrince',
     author_email='adeprince@nypublicradio.org',
     description='Estimate user\'s demographics from their name or email address.',
