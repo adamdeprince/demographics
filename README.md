@@ -14,13 +14,25 @@ To compute approximately how many people in the US have your name:
 57.129799999999996
 ````
 
-Or how many are black
+Or how people with your name are black. 
 
 ````
->>> from demographics import us_demographics
->>> me = us_demographics('adam', 'deprince')
->>> pop = 313.9 * 1000 ** 2 # Current population of the US
->>> me.popularity * me.black * pop
+>>> me = us_demographics('david','smith')
+>>> me.popularity * pop
+1020280.6273500001
+>>> me.popularity * pop * me.black
+226706.35539717003
+````
+
+Or not your gender
+
+````
+>>> me.popularity * pop * me.female
+16589.928900000003
+````
+
+
+
 
 
 Installation
